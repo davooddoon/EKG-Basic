@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#080d18">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<title>مرور ریتم‌های قلبی برای پزشکان</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800;900&display=swap">
+<style>
+:root{color-scheme:dark;--bg:#080d18;--card:#0f1729;--line:#223050;--tx:#e8eefc;--mut:#94a3c4}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:auto}
+body{background:var(--bg);color:var(--tx);font-family:Vazirmatn,Tahoma,sans-serif;line-height:1.85;padding-top:env(safe-area-inset-top,0px)}
+x{display:inline-block;direction:ltr;unicode-bidi:isolate}
+.cover{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:24px;scroll-snap-align:start;background:radial-gradient(circle at 70% 0,#1b2b55,transparent 55%),radial-gradient(circle at 10% 100%,#3a1330,transparent 50%)}
+.cover h1{font-size:clamp(30px,8vw,56px);font-weight:900;background:linear-gradient(90deg,#5eead4,#60a5fa,#f472b6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cover p{color:var(--mut);margin-top:8px}
+.cover .hint{margin-top:26px;font-size:13px;border:1px solid var(--line);border-radius:99px;padding:4px 16px}
+.p{display:none;min-height:100svh;padding:22px 16px 96px;max-width:760px;margin:auto;border-top:3px solid var(--c)}.p.on{display:block}.cover{display:none!important}
+.h{display:flex;gap:12px;align-items:center}
+.h>b{font-size:36px;font-weight:900;color:var(--c);min-width:52px}
+.h h2{font-size:24px;font-weight:800;line-height:1.3}
+.h small{display:block;color:var(--mut);font-size:12.5px}
+.t{margin-inline-start:auto;font-size:11.5px;font-weight:600;padding:2px 10px;border-radius:99px;background:#1e293b;color:var(--mut);white-space:nowrap}
+.t.s{background:#fbbf2422;color:#fbbf24}
+.m{position:relative;margin:14px 0;border:1px solid var(--line);border-radius:14px;background-color:#050a14;background-image:linear-gradient(#15261c 1px,transparent 1px),linear-gradient(90deg,#15261c 1px,transparent 1px);background-size:14px 14px;overflow:hidden;direction:ltr}
+.m canvas{width:100%;height:160px;display:block}
+.m span{position:absolute;top:6px;left:10px;font-size:11px;color:var(--c);opacity:.8}
+ul{list-style:none;padding:0;font-size:14.5px}
+li{padding:3px 20px 3px 0;position:relative}
+li::before{content:"";position:absolute;right:3px;top:14px;width:8px;height:8px;border-radius:50%;background:var(--c)}
+h3{font-size:13px;color:var(--mut);margin:16px 0 6px;font-weight:600}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-top:8px;overflow:hidden}
+details[open]{border-color:var(--c)}
+summary{list-style:none;cursor:pointer;padding:12px 14px;font-weight:600;font-size:14.5px;display:flex;align-items:center;gap:8px}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸";color:var(--c)}
+details[open] summary::before{content:"▾"}
+.sc{margin:0 12px 8px;padding:8px 12px;border-radius:8px;background:#fbbf2414;color:#fde68a;font-size:13.5px}
+.sc::before{content:"سناریو: ";font-weight:800}
+.r{display:flex;gap:10px;padding:8px 14px;border-top:1px solid var(--line);font-size:13.5px}
+.r>b{flex:0 0 92px;color:var(--c);font-weight:600}
+.r>span{flex:1;min-width:0}
+.z{margin:0 0 12px;border:1px solid #fbbf2455;background:linear-gradient(90deg,#fbbf2412,transparent);border-radius:12px;padding:8px 12px;font-size:13.5px;animation:zg 2.4s ease-in-out infinite}@keyframes zg{50%{box-shadow:0 0 14px #fbbf2440}}.z b{color:#fbbf24;display:block;font-size:13px}.z div{display:flex;gap:8px;padding:2px 0}.z i{font-style:normal;flex:0 0 118px;color:var(--c);font-weight:600}.z span{flex:1;min-width:0}
+#sp{position:fixed;inset:0;z-index:20;display:none;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-align:center;overflow:hidden;background:#080d18;background:radial-gradient(circle at 50% 45%,color-mix(in srgb,var(--c) 30%,#080d18),#080d18 72%)}#sp.go{display:flex;animation:spo 1.8s ease forwards}@keyframes spo{0%{opacity:0}14%{opacity:1}80%{opacity:1}100%{opacity:0;visibility:hidden}}.ring{position:absolute;top:calc(50% - 60px);left:calc(50% - 60px);width:120px;height:120px;border-radius:50%;border:2px solid var(--c);opacity:0;animation:rg 1.5s ease-out infinite}.ring:nth-child(2){animation-delay:.5s}@keyframes rg{0%{transform:scale(.4);opacity:.9}100%{transform:scale(3.6);opacity:0}}#sp svg{position:relative;filter:drop-shadow(0 0 6px var(--c))}#sp path{stroke-dasharray:700;stroke-dashoffset:700;animation:dr 1.1s ease-out .1s forwards}@keyframes dr{to{stroke-dashoffset:0}}.sp-n{position:relative;font-size:84px;font-weight:900;color:var(--c);line-height:1.1;opacity:.35;animation:pp .9s ease both}@keyframes pp{0%{transform:scale(.5);opacity:0}100%{transform:scale(1);opacity:.35}}.sp-t{position:relative;font-size:clamp(30px,9vw,54px);font-weight:900;animation:ri .8s .15s ease both}.sp-s{position:relative;color:var(--mut);animation:ri .8s .3s ease both}@keyframes ri{0%{transform:translateY(18px);opacity:0}100%{transform:none;opacity:1}}
+nav{position:fixed;bottom:0;inset-inline:0;display:flex;justify-content:center;align-items:center;gap:14px;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));background:#080d18ee;backdrop-filter:blur(8px);border-top:1px solid var(--line);z-index:5}
+nav button{font:inherit;color:var(--tx);background:var(--card);border:1px solid var(--line);border-radius:10px;padding:6px 18px;cursor:pointer}
+nav output{font-size:13px;color:var(--mut);min-width:60px;text-align:center}
+.f{max-width:760px;margin:auto;padding:0 16px 110px;font-size:12px;color:var(--mut);text-align:center}
+</style>
+</head>
+<body>
+<section class="cover"><h1>مرور ریتم‌های قلبی</h1><p>برای پزشکان · هر صفحه یک ریتم</p><p class="hint">برای شروع دکمه «بعدی» را بزنید یا صفحه را به چپ بکشید</p></section>
+<main id="app"></main>
+<p class="f">برای مرور بالینی و بر پایه ACLS بزرگسالان است. دوز و رقیق‌سازی را همیشه با شرایط بیمار، پروتکل و راهنمای داروی مرکز خود تطبیق دهید.</p>
+<div id="sp"></div><nav><button id="pv">قبلی</button><output id="ct">۰</output><button id="nx">بعدی</button></nav>
+<script>
+const G=(x,c,a,w)=>a*Math.exp(-(((x-c)/w)**2)),N=900;
+function mk(cs,o={}){const w=o.w||1,P=o.P||(o.p===0?[]:cs.map(c=>c-14)),a=[];for(let x=0;x<N;x++){let y=0;for(const c of P)y+=G(x,c,5,3.2);for(const c of cs)y+=G(x,c-3*w,-5,1.2*w)+G(x,c,26,1.4*w)+G(x,c+3*w,-9,1.4*w)+G(x,c+8*w+(o.s?4:0),o.s||0,o.sw||8)+G(x,c+17*w,o.ta??6,o.tw||5);if(o.n)y+=o.n*Math.sin(x*1.9)*Math.sin(x*.7+1);a.push(y)}return a}
+const S=f=>Array.from({length:N},(_,x)=>f(x)),ev=(n,s,o)=>Array.from({length:n},(_,i)=>o+s*i);
+let r=7;const rn=()=>(r=r*16807%2147483647)/2147483647,afc=[];for(let x=15;x<N;x+=14+Math.floor(rn()*30))afc.push(x);
+const mp=ev(18,50,20);
+const R={nsr:()=>mk(ev(20,44,30),{}),psvt:()=>mk(ev(38,24,20),{p:0,ta:3}),vt:()=>S(x=>24*Math.sin(x/3.6)+4*Math.sin(x/1.7)),vf:()=>S(x=>(10*Math.sin(x/3.1)+8*Math.sin(x/1.9+1)+6*Math.sin(x/5.3))*(.6+.4*Math.sin(x/37))),af:()=>mk(afc,{p:0,n:1.6}),tdp:()=>S(x=>(4+22*Math.abs(Math.sin(x/40)))*Math.sin(x/3.3)),hk:()=>mk(ev(20,48,30),{p:0,w:1.6,ta:21,tw:3.4}),stemi:()=>mk(ev(17,56,40),{ta:0,s:16,sw:9}),mob:()=>mk(mp.map(c=>c+14).filter((_,k)=>k%4!=3),{P:mp,w:1.6,ta:4}),chb:()=>mk(ev(12,75,40),{P:ev(25,36,10),w:1.8,ta:3}),asy:()=>S(x=>.8*Math.sin(x/20)+.3*Math.sin(x/6))};
+const D=[
+{k:'nsr',c:'#4ade80',n:'Normal Sinus Rhythm',s:'ریتم سینوسی طبیعی',t:'طبیعی',K:['ریت 60–100 در دقیقه، کاملاً منظم؛ قبل از هر QRS یک P و بعد از هر P یک QRS','P مثبت در II و aVF و منفی در aVR؛ PR بین 0.12 و 0.20 ثانیه','QRS کمتر از 0.12 ثانیه؛ QTc کمتر از 450 ms در مردان و 460 ms در زنان'],
+P:[{t:'ملاک‌های تشخیصی و فواصل',sc:'زن 35 ساله بدون علامت، ECG روتین قبل از جراحی: HR 72، منظم، P قبل از هر QRS.',r:[['ریت','300 ÷ تعداد مربع بزرگ بین دو R (ریتم منظم)؛ یا تعداد QRS در 6 ثانیه × 10'],['PR','0.12–0.20 ثانیه (3–5 مربع کوچک)'],['QRS','کمتر از 0.12 ثانیه (3 مربع کوچک)'],['QT','QTc = QT ÷ √RR (فرمول Bazett)؛ بیش از 500 ms پرخطر']]},
+{t:'تفسیر سیستماتیک نوار',sc:'پیش از قضاوت ریتم، هر نوار را با همین ترتیب بخوانید.',r:[['1. ریت','تاکی (بیش از 100)، برادی (کمتر از 60)، طبیعی'],['2. ریتم','منظم یا نامنظم؛ آیا P وجود دارد؟'],['3. محور','QRS مثبت در I و aVF = محور طبیعی'],['4. فواصل','PR و QRS و QT'],['5. موج‌ها','ST و T و Q پاتولوژیک و ایسکمی'],['6. بالینی','با شرح حال و علائم بیمار تطبیق دهید']]}]},
+{k:'psvt',c:'#38bdf8',n:'PSVT',s:'تاکی‌کاردی فوق‌بطنی حمله‌ای',t:'تاکی · منظم',K:['ریت 150–250، کاملاً منظم، QRS باریک؛ P معمولاً دیده نمی‌شود','شروع و پایان ناگهانی؛ شایع‌ترین علت AVNRT','نکته بالینی: علائم ناپایداری (افت BP، درد قفسه، گیجی) را مرتب بررسی کنید'],
+P:[{t:'مانور واگ (خط اول)',sc:'مرد 30 ساله، HR 190، BP 118/76، هوشیار و بدون درد قفسه.',r:[['روش','Modified Valsalva: بیمار نیمه‌نشسته، فوت در سرنگ 10 mL به مدت 15 ثانیه؛ بلافاصله خوابانده و پاها را 15 ثانیه بالا ببرید'],['پایش','ECG پیوسته؛ اگر تبدیل نشد ← آدنوزین'],['احتیاط','ماساژ کاروتید در سالمند یا سوفل کاروتید ممنوع']]},
+{t:'آدنوزین',sc:'همان بیمار؛ مانور واگ بی‌اثر بود.',r:[['راه','IV بزرگ در آنتی‌کوبیتال + سه‌راهی و سرنگ 20 mL NS'],['دوز اول','6 mg پوش سریع 1–3 ثانیه، بلافاصله فلاش 20 mL NS و بالا بردن دست'],['دوز دوم','بعد 1–2 دقیقه: 12 mg به همان روش (حداکثر یک بار تکرار)'],['هشدار','مکث گذرا (asystole)، برونکواسپاسم در آسم؛ در کاتتر مرکزی یا پیوند قلب دوز اول 3 mg']]},
+{t:'ناپایدار: کاردیوورژن',sc:'همان بیمار با BP 78/40 و گیجی.',r:[['قبل از شوک','سدیشن کوتاه‌اثر طبق دستور پزشک'],['شوک','SYNC روشن، marker روی R، 50–100 J؛ اعلام «همه دور شوند»'],['بعد از شوک','ریتم و BP را فوراً بررسی کنید']]},
+{t:'خط دوم دارویی (پس از آدنوزین)',sc:'همان بیمار؛ دو دوز آدنوزین بی‌اثر بود، BP 120/80 و QRS باریک.',r:[['دیلتیازم','0.25 mg/kg (حدود 15–20 mg) IV طی 2 دقیقه؛ اگر پاسخ نبود بعد 15 دقیقه 0.35 mg/kg'],['وراپامیل','2.5–5 mg IV آهسته طی 2 دقیقه؛ در صورت نیاز 5–10 mg بعد 15–30 دقیقه (حداکثر 20 mg)'],['متوپرولول','2.5–5 mg IV آهسته طی 2 دقیقه (جایگزین)'],['ممنوعیت','نارسایی قلب با EF پایین، افت فشار، WPW یا QRS پهن؛ تجویز همزمان بتابلاکر و وراپامیل/دیلتیازم ممنوع'],['پایش','ECG و BP حین تزریق؛ کلسیم گلوکونات 1 g آماده باشد']]}]},
+{k:'vt',c:'#fb7185',n:'VT',s:'تاکی‌کاردی بطنی',t:'⚡ اگر بی‌نبض',K:['ریت بیش از 100 (معمولاً 150–250)، منظم، QRS پهن بیش از 0.12 ثانیه','AV dissociation و ضربان fusion/capture = تأیید VT','هر تاکی‌کاردی با QRS پهن را تا اثبات خلاف، VT بدانید'],
+P:[{t:'VT پایدار با نبض',sc:'مرد 62 ساله با سابقه MI، HR 170، BP 110/70، هوشیار.',r:[['آمیودارون','150 mg رقیق در 100 mL D5W طی 10 دقیقه (فقط D5W)'],['ادامه','1 mg/min تا 6 ساعت (900 mg در 500 mL D5W ← 33 mL/h)'],['پایش','BP، HR و QT؛ خطر افت فشار و برادی‌کاردی']]},
+{t:'ناپایدار یا بی‌نبض',sc:'همان بیمار؛ ناگهان BP 70/40، بی‌هوش و بدون نبض.',r:[['با نبض','SYNC، 100 J؛ در شکست انرژی را بالا ببرید'],['بی‌نبض','CPR و شوک بدون سینک 120–200 J ← الگوریتم VF'],['ایمنی','پدها خشک و محکم؛ اکسیژن را از صورت دور کنید']]},
+{t:'خط بعدی VT پایدار',sc:'همان بیمار؛ بعد از آمیودارون VT ادامه دارد، BP 105/65 و هوشیار.',r:[['آمیودارون تکراری','150 mg دیگر طی 10 دقیقه (حداکثر 2.2 g/24h)'],['پروکائین‌آمید','20–50 mg/min IV تا قطع آریتمی، افت فشار، پهن شدن QRS بیش از 50% یا مجموع 17 mg/kg؛ سپس 1–4 mg/min'],['لیدوکائین','1–1.5 mg/kg IV؛ تکرار 0.5–0.75 mg/kg هر 5–10 دقیقه (حداکثر 3 mg/kg)؛ سپس 1–4 mg/min'],['ممنوعیت','پروکائین‌آمید در QT طولانی یا EF پایین']]}]},
+{k:'vf',c:'#f59e0b',n:'VF',s:'فیبریلاسیون بطنی',t:'⚡ شوک‌پذیر',K:['ریتم آشفته بدون QRS مشخص؛ نبض و هوشیاری ندارد','Coarse VF دامنه بزرگ؛ Fine VF را با asystole اشتباه نگیرید','هر دقیقه تأخیر در شوک شانس بقا را کم می‌کند'],
+P:[{t:'پروتکل ایست قلبی',sc:'مرد 58 ساله در بخش ناگهان بی‌پاسخ است؛ نبض ندارد و مانیتور VF نشان می‌دهد.',r:[['CPR','100–120/min، عمق 5–6 cm، 30:2؛ ریتم را هر 2 دقیقه بررسی کنید'],['شوک','120–200 J بیفازیک (یا حداکثر دستگاه)؛ بلافاصله CPR ادامه یابد'],['اپی‌نفرین','1 mg (1:10000 ← 10 mL) پوش IV/IO + فلاش 20 mL NS؛ هر 3–5 دقیقه بعد از شوک دوم'],['آمیودارون','300 mg پوش بعد از شوک سوم؛ سپس 150 mg (یا لیدوکائین 1–1.5 mg/kg)']]},
+{t:'VF مقاوم و بعد از ROSC',sc:'همان بیمار؛ سه شوک زده شده و VF ادامه دارد.',r:[['آمیودارون دوم','150 mg پوش IV/IO'],['لیدوکائین','جایگزین: 1–1.5 mg/kg IV/IO؛ بعد 0.5–0.75 mg/kg هر 5–10 دقیقه (حداکثر 3 mg/kg)'],['منیزیم','2 g IV/IO فقط اگر شک TdP یا هایپومنیزیمی'],['بعد از ROSC','انفوزیون آمیودارون 1 mg/min یا لیدوکائین 1–4 mg/min طبق دستور؛ هدف SBP حداقل 90 و MAP حداقل 65'],['پایش','ETCO2 حین CPR (هدف حداقل 10 mmHg)؛ جهش ناگهانی = احتمال ROSC']]}]},
+{k:'af',c:'#a78bfa',n:'AF',s:'فیبریلاسیون دهلیزی',t:'نامنظم‌نامنظم',K:['R-R کاملاً نامنظم، بدون P، خط پایه لرزان','خطر ترومبوآمبولی؛ شروع بیش از 48 ساعت = ضدانعقاد یا TEE قبل از کاردیوورژن','در WPW همراه AF دیلتیازم، دیگوکسین و آدنوزین ممنوع'],
+P:[{t:'کنترل ریت (پایدار)',sc:'زن 70 ساله، HR 150، BP 130/80، بدون نارسایی قلب.',r:[['دیلتیازم','0.25 mg/kg (حدود 15–20 mg) IV طی 2 دقیقه؛ بعد 15 دقیقه 0.35 mg/kg؛ سپس 5–15 mg/h'],['متوپرولول','2.5–5 mg IV آهسته طی 2 دقیقه، هر 5 دقیقه تا 3 دوز'],['ممنوعیت','نارسایی قلب با EF پایین، افت فشار، WPW'],['پایش','BP قبل و بعد از هر دوز']]},
+{t:'ناپایدار',sc:'همان بیمار با BP 80/50 و تنگی نفس.',r:[['شوک','SYNC، 120–200 J بیفازیک'],['قبل از شوک','سدیشن در بیمار هوشیار؛ ضدانعقاد طبق پروتکل']]},
+{t:'خط بعدی: دیگوکسین و آمیودارون',sc:'همان بیمار با نارسایی قلب EF 25%، HR 140 و BP 105/65 (دیلتیازم ممنوع).',r:[['دیگوکسین','0.25–0.5 mg IV بولوس؛ سپس 0.25 mg هر 6 ساعت تا کل 1 mg در 24 ساعت (با K و کراتینین مناسب)'],['آمیودارون','150 mg IV طی 10 دقیقه؛ سپس 1 mg/min تا 6 ساعت و 0.5 mg/min؛ خطر کاردیوورژن شیمیایی'],['WPW + AF','پروکائین‌آمید 20–50 mg/min یا کاردیوورژن'],['ضدانعقاد','هپارین یا داروی خوراکی طبق CHA2DS2-VASc'],['هدف','HR استراحت حدود 110؛ کاهش تدریجی']]}]},
+{k:'tdp',c:'#f472b6',n:'Torsades de Pointes',s:'VT پلی‌مورفیک با QT طولانی',t:'⚡ اگر بی‌نبض',K:['دامنه QRS چرخشی کم و زیاد می‌شود؛ زمینه QT طولانی','علل: هایپوکالمی، هایپومنیزیمی، برادی‌کاردی، داروها (haloperidol، ondansetron، ماکرولیدها)','آمیودارون و پروکائین‌آمید ممنوع'],
+P:[{t:'با نبض',sc:'زن 65 ساله با haloperidol و ondansetron، K 2.9، QTc 560، TdP با نبض.',r:[['منیزیم','MgSO4 2 g رقیق در 50–100 mL D5W طی 5–15 دقیقه؛ سپس 0.5–1 g/h'],['پتاسیم','KCl وریدی طبق پروتکل (هدف K بالای 4.5؛ محیطی حداکثر 10 mEq/h)'],['داروها','قطع داروهای طولانی‌کننده QT'],['پایش','ECG پیوسته؛ رفلکس پاتلار (علامت سمیت منیزیم)']]},
+{t:'بی‌نبض یا ناپایدار',sc:'همان بیمار؛ نبض از بین رفته است.',r:[['اقدام','CPR + شوک بدون سینک'],['منیزیم','2 g رقیق در 10 mL D5W پوش IV/IO'],['وابسته به برادی','پیس overdrive یا ایزوپروترنول با دستور پزشک']]},
+{t:'ایزوپروترنول و پیس',sc:'همان بیمار؛ منیزیم داده شد ولی با HR 45 عود می‌کند.',r:[['ایزوپروترنول','2–10 mcg/min؛ 1 mg در 250 mL D5W (4 mcg/mL) ← 30–150 mL/h'],['Overdrive pacing','پیس دهلیزی یا بطنی با ریت 90–110 تا رفع علت'],['منیزیم تکراری','بولوس دوم 2 g در صورت عود'],['ممنوع','ایزوپروترنول در LQT مادرزادی؛ آنجا بتابلاکر مناسب است']]}]},
+{k:'hk',c:'#34d399',n:'هایپرکالمی',s:'Hyperkalemia',t:'متابولیک',K:['T بلند نوک‌تیز ← PR بلند و P پهن ← QRS پهن ← sine wave ← VF/asystole','علل: نارسایی کلیه و دیالیز، اسیدوز، ACEI، spironolactone','در مصرف دیژیتال کلسیم را آهسته‌تر بدهید'],
+P:[{t:'محافظت قلب',sc:'بیمار دیالیزی؛ K 7.2، T نوک‌تیز، QRS پهن، BP 100/60.',r:[['کلسیم گلوکونات','10%: 10–30 mL (1–3 g) IV طی 2–3 دقیقه؛ اگر ECG بهتر نشد بعد 5 دقیقه تکرار'],['کلرید کلسیم','10%: 5–10 mL فقط از CVC'],['احتیاط','با بی‌کربنات در یک مسیر نریزید (رسوب)؛ ECG پیوسته']]},
+{t:'انتقال به داخل سلول و دفع',sc:'همان بیمار؛ ECG بهتر شده ولی K هنوز بالاست.',r:[['انسولین','رگولار 10 U IV + دکستروز 25 g (50 mL D50) طی 5 دقیقه؛ 5 U در نارسایی کلیه'],['قند خون','هر 1 ساعت تا 4–6 ساعت؛ اگر زیر 250 mg/dL، انفوزیون D10'],['آلبوترول','10–20 mg نبولایز طی 10 دقیقه'],['بی‌کربنات','50 mEq فقط در اسیدوز متابولیک'],['دفع','فوروزماید 40–80 mg IV؛ همودیالیز اورژانس']]},
+{t:'خط بعدی: کاهش پتاسیم بدن',sc:'همان بیمار دیالیزی بدون ادرار؛ نیاز به دفع پتاسیم.',r:[['Sodium zirconium cyclosilicate','10 g خوراکی در 45 mL آب، سه بار در روز تا 48 ساعت'],['Patiromer','8.4–16.8 g خوراکی روزانه؛ 3 ساعت فاصله از سایر داروها'],['Sodium polystyrene','15–30 g خوراکی؛ در ایلئوس یا انسداد روده ممنوع'],['همودیالیز','درمان قطعی؛ نفرولوژی را فوراً مطلع کنید'],['پایش','K سرم 1–2 ساعت بعد انسولین و سپس هر 2–4 ساعت؛ اثر انسولین و آلبوترول 2–4 ساعت است و K برمی‌گردد']]}]},
+{k:'stemi',c:'#ef4444',n:'STEMI',s:'انفارکتوس حاد با صعود ST',t:'زمان‌محور',K:['ST بالا حداقل 1 mm در 2 لید مجاور (V2–V3: 2 mm مردان بالای 40 سال، 1.5 mm زنان)','قدامی V1–V4 = LAD؛ تحتانی II, III, aVF = RCA؛ جانبی I, aVL, V5–V6 = LCx','هدف: ECG ظرف 10 دقیقه، PCI ظرف 90 دقیقه، لیز ظرف 30 دقیقه'],
+P:[{t:'درمان دارویی اولیه',sc:'مرد 55 ساله، درد قفسه 40 دقیقه‌ای، ST بالا V2–V5، BP 140/90.',r:[['آسپرین','162–325 mg جویدنی'],['نیتروگلیسیرین','0.4 mg زیرزبانی هر 5 دقیقه تا 3 بار؛ اگر SBP زیر 90 یا مصرف PDE5i در 24–48 ساعت قبل، ندهید'],['هپارین','UFH بولوس 60 U/kg (حداکثر 4000 U) و انفوزیون 12 U/kg/h (حداکثر 1000 U/h)'],['P2Y12','ticagrelor 180 mg خوراکی'],['اکسیژن','فقط اگر SpO2 زیر 90%']]},
+{t:'تحتانی با درگیری RV',sc:'مرد 68 ساله، ST بالا II, III, aVF، BP 85/50، ریه پاک.',r:[['اقدام اول','ECG لید V4R'],['ممنوع','نیترات و مورفین'],['مایع','NS 250–500 mL بولوس سریع؛ BP و صدای ریه را بعد از هر بولوس بررسی کنید']]},
+{t:'ترومبولیتیک',sc:'مرکز بدون PCI و زمان انتقال بیش از 120 دقیقه.',r:[['Tenecteplase','بولوس IV طی 5 ثانیه بر اساس وزن: زیر 60 kg=30 mg، 60–69=35، 70–79=40، 80–89=45، 90 و بالاتر=50 mg'],['قبل از تجویز','موارد منع (خونریزی فعال، جراحی یا ترومای اخیر، سکته مغزی) را مرور کنید']]},
+{t:'داروهای بعدی و عوارض',sc:'همان بیمار اول؛ درد ادامه دارد، HR 105 و BP 150/90.',r:[['مورفین','2–4 mg IV آهسته فقط اگر درد با نیترات رفع نشد؛ تکرار هر 5–15 دقیقه'],['انفوزیون نیترو','5–10 mcg/min و افزایش هر 3–5 دقیقه؛ SBP زیر 90 قطع'],['بتابلاکر','متوپرولول 25–50 mg خوراکی ظرف 24 ساعت؛ در نارسایی قلب، افت فشار یا برادی ممنوع'],['استاتین','atorvastatin 80 mg خوراکی'],['بعد از لیز','enoxaparin 30 mg IV و 15 دقیقه بعد 1 mg/kg زیرجلدی هر 12 ساعت (زیر 75 سال)'],['آریتمی','VF یا VT طبق پروتکل؛ دفیبریلاتور آماده']]}]},
+{k:'mob',c:'#fb923c',n:'Mobitz II',s:'بلوک AV درجه 2 نوع 2',t:'برادی · خطرناک',K:['PR ثابت؛ ناگهان P بدون QRS (بدون طولانی شدن قبلی PR)','محل بلوک زیر گره AV؛ QRS اغلب پهن؛ خطر پیشرفت به بلوک کامل','Mobitz I: PR تدریجی بلند می‌شود و بعد یک QRS می‌افتد؛ معمولاً خوش‌خیم‌تر'],
+P:[{t:'پیس و داروهای حمایتی',sc:'مرد 70 ساله، سنکوپ، HR 38، BP 85/50.',r:[['آتروپین','معمولاً بی‌اثر؛ فقط با دستور پزشک 1 mg IV'],['TCP','پد قدامی–خلفی؛ ریت 60–80/min؛ جریان را آهسته بالا ببرید تا capture، نبض فمورال را لمس کنید'],['دوپامین','5–20 mcg/kg/min؛ مخلوط 400 mg در 250 mL (1600 mcg/mL)؛ mL/h = (dose × kg × 60) ÷ 1600'],['اپی‌نفرین','2–10 mcg/min؛ 1 mg در 250 mL NS ← 30–150 mL/h'],['درد','TCP دردناک است؛ آنالژزی و سدیشن طبق دستور']]},
+{t:'خط بعدی و مسمومیت‌ها',sc:'همان بیمار؛ TCP برقرار است ولی BP 90/55.',r:[['دوپامین','شروع 5 mcg/kg/min و هر 2–5 دقیقه بالا ببرید تا 20؛ مثال 70 kg با 5 mcg/kg/min ← 13 mL/h'],['اپی‌نفرین','2–10 mcg/min؛ 30–150 mL/h از 4 mcg/mL'],['گلوکاگون','مسمومیت بتابلاکر: 3–10 mg IV آهسته؛ سپس 3–5 mg/h'],['کلسیم','مسمومیت CCB: کلسیم گلوکونات 10% 1–3 g'],['بعدی','پیس‌میکر دائم؛ NPO و اطلاع کاردیولوژی']]}]},
+{k:'chb',c:'#22d3ee',n:'AV Block',s:'بلوک کامل (درجه 3)',t:'برادی',K:['P-P و R-R هر دو منظم ولی مستقل از هم (AV dissociation)','ریت escape: جانکشنال 40–60 (باریک)، بطنی 20–40 (پهن)','درجه 1: PR بیش از 0.20 ثانیه و همه P ها هدایت می‌شوند'],
+P:[{t:'بلوک کامل ناپایدار',sc:'زن 74 ساله، MI تحتانی، HR 32، BP 80/50، سرگیجه.',r:[['آتروپین','1 mg IV پوش هر 3–5 دقیقه تا حداکثر 3 mg (سرنگ 1 mg/10 mL)'],['اگر بی‌اثر','فوراً TCP یا انفوزیون دوپامین/اپی‌نفرین (جدول Mobitz II)'],['بعدی','پیس‌میکر دائم؛ علل: MI تحتانی، بتابلاکر، دیگوکسین']]},
+{t:'پس از شکست آتروپین',sc:'همان بیمار؛ آتروپین 3 mg داده شد و بی‌اثر است.',r:[['دوپامین','5–20 mcg/kg/min؛ 400 mg در 250 mL؛ mL/h = (dose × kg × 60) ÷ 1600'],['اپی‌نفرین','2–10 mcg/min؛ 1 mg در 250 mL NS ← 30–150 mL/h'],['ایزوپروترنول','2–10 mcg/min؛ فقط پیش از پیس و در نبود ایسکمی فعال'],['TCP','ریت 60–80؛ capture را با لمس نبض تأیید کنید'],['مسمومیت دیژیتال','آنتی‌دوت DigiFab با دستور پزشک']]}]},
+{k:'asy',c:'#cbd5e1',n:'Asystole',s:'ایست بدون فعالیت الکتریکی',t:'🚫 غیرشوک‌پذیر',K:['خط تقریباً صاف و بی‌نبض','قبل از تشخیص: اتصال لیدها، گین و بررسی در دو لید','شوک ممنوع؛ CPR و علل برگشت‌پذیر'],
+P:[{t:'پروتکل Asystole',sc:'بیمار 80 ساله بی‌پاسخ، بدون نبض، خط صاف در دو لید.',r:[['CPR','30:2؛ با راه هوایی پیشرفته فشار مداوم + 1 تنفس هر 6 ثانیه'],['اپی‌نفرین','1 mg IV/IO پوش + فلاش 20 mL NS؛ هر 3–5 دقیقه، هرچه زودتر'],['علل H و T','هایپوولمی ← 20 mL/kg کریستالوئید؛ هایپرکالمی ← کلسیم؛ هایپوکسی ← تهویه؛ پنوموتوراکس ← دکمپرشن'],['پایان','قطع احیا با تصمیم پزشک بعد از رفع علل']]},
+{t:'داروهای تکمیلی بر اساس علت',sc:'همان بیمار؛ چند دور CPR و اپی‌نفرین داده شده و نبض برنگشته.',r:[['اپی‌نفرین','ادامه 1 mg هر 3–5 دقیقه'],['کلسیم','هایپرکالمی/دیالیز: calcium chloride 10% 5–10 mL یا گلوکونات 10–30 mL'],['بی‌کربنات','50 mEq IV در اسیدوز شدید یا هایپرکالمی'],['مایع','هایپوولمی: NS 20 mL/kg سریع'],['توصیه نمی‌شود','آتروپین و پیس ترانس‌کوتانئوس در asystole'],['قطع احیا','بعد از حدود 20 دقیقه CPR و ETCO2 زیر 10 mmHg، تصمیم با پزشک']]}]}
+];
+const PER=/([\u0600-\u06FF\u200c]+)/,bal=c=>(c.match(/\(/g)||[]).length-(c.match(/\)/g)||[]).length;
+const L=s=>s.split(PER).map(g=>{if(!/[A-Za-z0-9]/.test(g))return g;const m=g.match(/^(\s*)([\s\S]*?)(\s*)$/);let pre=m[1],c=m[2],po=m[3];for(;;){const a=c[0],z=c[c.length-1];if(a&&(/[^A-Za-z0-9%(]/.test(a)||(a=='('&&bal(c)>0))){pre+=a;c=c.slice(1)}else if(z&&(/[^A-Za-z0-9%)]/.test(z)||(z==')'&&bal(c)<0))){po=z+po;c=c.slice(0,-1)}else break}return c?pre+'<x>'+c.replace(/←/g,'→')+'</x>'+po:g}).join('');
+const Z={nsr:[['شوک','ندارد؛ ریتم طبیعی و پایدار']],psvt:[['SYNC (اولیه)','50–100 J؛ در شکست پله‌پله افزایش دهید'],['بدون SYNC','لازم نیست']],vt:[['VT با نبض (SYNC)','100 J اولیه؛ در شکست پله‌پله افزایش'],['VT بی‌نبض','بدون SYNC: 120–200 J بیفازیک (مونوفازیک 360 J)']],vf:[['بدون SYNC','بیفازیک 120–200 J یا حداکثر دستگاه؛ مونوفازیک 360 J'],['شوک‌های بعدی','همان انرژی یا بالاتر؛ بعد از هر شوک 2 دقیقه CPR']],af:[['SYNC','بیفازیک 120–200 J؛ مونوفازیک 200 J'],['شرط','در ناپایدار فوری؛ در پایدار بعد از ضدانعقاد یا TEE']],tdp:[['بی‌نبض یا ناپایدار','بدون SYNC: 120–200 J بیفازیک (مونوفازیک 360 J)'],['با نبض','شوک ندارد؛ منیزیم و اصلاح K']],hk:[['شوک','ندارد؛ درمان با کلسیم. اگر به VF رفت: 120–200 J بدون SYNC']],stemi:[['اگر VF یا VT بی‌نبض','120–200 J بیفازیک بدون SYNC'],['سایر حالت‌ها','شوک ندارد؛ PCI یا لیز']],mob:[['شوک','ندارد؛ TCP با ریت 60–80/min']],chb:[['شوک','ندارد؛ آتروپین و TCP با ریت 60–80/min']],asy:[['شوک','ممنوع (غیرشوک‌پذیر)؛ فقط CPR و اپی‌نفرین']]};
+const zb=d=>`<div class="z"><b>⚡ انرژی شوک</b>${Z[d.k].map(r=>`<div><i>${r[0]}</i><span>${L(r[1])}</span></div>`).join('')}</div>`;
+const fa=n=>String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
+document.getElementById('app').innerHTML=D.map((d,i)=>`<section class="p" style="--c:${d.c}"><div class="h"><b>${fa(String(i+1).padStart(2,'0'))}</b><div><h2>${L(d.n)}</h2><small>${L(d.s)}</small></div><span class="t${d.t[0]=='⚡'?' s':''}">${d.t}</span></div><div class="m"><canvas></canvas><span>Lead II</span></div>${zb(d)}<ul>${d.K.map(k=>`<li>${L(k)}</li>`).join('')}</ul><h3>پروتکل‌ها (برای باز شدن لمس کنید)</h3>${d.P.map(p=>`<details><summary>${L(p.t)}</summary><div class="sc">${L(p.sc)}</div>${p.r.map(x=>`<div class="r"><b>${x[0]}</b><span>${L(x[1])}</span></div>`).join('')}</details>`).join('')}</section>`).join('');
+const cs=[...document.querySelectorAll('canvas')].map((cv,i)=>({cv,x:cv.getContext('2d'),sig:R[D[i].k](),c:D[i].c,v:false,w:0,h:0}));
+const WN=300;
+function fit(o){const d=devicePixelRatio||1;o.w=o.cv.clientWidth;o.h=o.cv.clientHeight;o.cv.width=o.w*d;o.cv.height=o.h*d;o.x.setTransform(d,0,0,d,0,0)}
+const io=new IntersectionObserver(es=>es.forEach(e=>{const o=cs.find(q=>q.cv==e.target.querySelector('canvas'));o.v=e.isIntersecting;if(o.v)fit(o)}),{threshold:.05});
+document.querySelectorAll('.p').forEach(p=>io.observe(p));
+function loop(t){for(const o of cs){if(!o.v)continue;const pos=t/1000*70,pass=Math.floor(pos/WN),h=pos%WN,off=(pass%3)*WN,x=o.x;x.clearRect(0,0,o.w,o.h);x.lineWidth=2;x.lineCap='round';x.strokeStyle=o.c;const X=i=>i*o.w/(WN-1),Y=i=>o.h/2-o.sig[off+i]*o.h/64;for(let i=1;i<WN;i++){const dd=(h-i+WN)%WN;if(dd>WN-14)continue;x.globalAlpha=1-.88*dd/WN;x.beginPath();x.moveTo(X(i-1),Y(i-1));x.lineTo(X(i),Y(i));x.stroke()}x.globalAlpha=1;x.fillStyle=o.c;x.shadowColor=o.c;x.shadowBlur=10;x.beginPath();x.arc(X(Math.floor(h)),Y(Math.floor(h)),3,0,7);x.fill();x.shadowBlur=0}requestAnimationFrame(loop)}
+requestAnimationFrame(loop);
+addEventListener('resize',()=>cs.forEach(o=>o.v&&fit(o)));
+const secs=[...document.querySelectorAll('.p')],ct=document.getElementById('ct');
+let cur=-1;
+function upd(){const m=innerHeight*.4;let k=-1;secs.forEach((s,i)=>{if(s.getBoundingClientRect().top<m)k=i});cur=k;ct.textContent=k<0?'مقدمه':fa(k+1)+' از '+fa(secs.length)}
+
+const go=k=>k<0?scrollTo({top:0,behavior:'smooth'}):secs[Math.min(k,secs.length-1)].scrollIntoView({behavior:'smooth'});
+document.getElementById('nx').onclick=()=>go(cur+1);
+const pg=secs;let ix=0;
+function show(k){ix=Math.max(0,Math.min(pg.length-1,k));pg.forEach((p,i)=>p.classList.toggle('on',i==ix));ct.textContent=fa(ix+1)+' از '+fa(secs.length);try{scrollTo(0,0)}catch(e){}}
+function splash(d){const s=document.getElementById('sp');s.className='';s.style.setProperty('--c',d.c);s.innerHTML='<i class="ring"></i><i class="ring"></i><svg viewBox="0 0 220 60" width="220" height="60"><path d="M0 30H60L70 27L78 30H90L95 37L102 3L110 53L116 30H135L148 19L162 30H220" fill="none" stroke="'+d.c+'" stroke-width="3" stroke-linejoin="round"/></svg><div class="sp-n">'+(ix?fa(ix):'🫀')+'</div><div class="sp-t">'+L(d.n)+'</div><div class="sp-s">'+L(d.s)+'</div>';void s.offsetWidth;s.className='go';s.onclick=()=>{s.className=''}}
+document.getElementById('nx').onclick=()=>show(ix+1);
+document.getElementById('pv').onclick=()=>show(ix-1);
+addEventListener('keydown',e=>{if(e.key=='ArrowLeft')show(ix+1);if(e.key=='ArrowRight')show(ix-1)});
+let sx=0;addEventListener('touchstart',e=>{sx=e.touches[0].clientX},{passive:true});addEventListener('touchend',e=>{const d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>90)show(ix+(d<0?1:-1))},{passive:true});
+show(0);splash({c:'#5eead4',n:'مرور ریتم‌های قلبی',s:'ECG · ACLS برای پزشکان'});
+if('serviceWorker' in navigator){window.addEventListener('load',()=>{navigator.serviceWorker.register('./sw.js').catch(()=>{})})}
+</script>
+</body>
+</html>
